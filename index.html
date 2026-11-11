@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#efe4d8">
+  <meta name="description" content="A little birthday story, made with sincerity.">
+  <title>Our Little Story — A Birthday Book</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="locked">
+  <section class="gate" id="gate">
+    <div class="gate-card">
+      <div class="gate-flower">✿</div>
+      <p class="gate-overline">A PRIVATE LITTLE WORLD</p>
+      <h2>A gift I made<br><em>just for you</em></h2>
+      <p class="gate-subtitle">…and a secret that belongs only to the two of us. ♡</p>
+      <div class="gate-form">
+        <input class="gate-input" id="gateInput" type="password" placeholder="Enter our secret password" autocomplete="off" aria-label="Secret password">
+        <button class="gate-button" id="gateEnter" type="button">Unlock →</button>
+      </div>
+      <p class="gate-hint" id="gateHint">Only the two of us would know it. ♡</p>
+    </div>
+  </section>
+
+  <div class="paper-grain" aria-hidden="true"></div>
+  <div class="ambient ambient-a" aria-hidden="true"></div>
+  <div class="ambient ambient-b" aria-hidden="true"></div>
+
+  <header class="toolbar">
+    <a class="wordmark" href="#" aria-label="Back to the beginning">♡ our little story</a>
+    <div class="toolbar-right">
+      <span class="date-label">A LITTLE BOOK OF MEMORIES</span>
+      <button class="music-button" id="musicButton" type="button" aria-label="Toggle background music">♫ <span id="musicLabel">Music off</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="welcome" id="welcome">
+      <div class="welcome-flower">✿</div>
+      <p class="overline">A birthday gift, made just for you</p>
+      <h1>Our Little <em>Story</em></h1>
+      <p class="welcome-subtitle">Some beautiful stories begin when we least expect them.</p>
+      <button class="button button-dark" id="beginButton">Open your story <span>↗</span></button>
+      <p class="welcome-note">Turn the pages slowly. There's no rush. ♡</p>
+    </section>
+
+    <section class="reader" id="reader" aria-label="Interactive storybook" aria-hidden="true">
+      <div class="book-shell">
+        <div class="book-shadow"></div>
+        <div class="book" id="book">
+          <div class="book-back"></div>
+          <div class="spread">
+            <article class="paper-page left-page">
+              <div class="page-content">
+                <div class="page-top"><span class="chapter-label" id="chapterLabel">CHAPTER 01</span><span class="page-flower">✿</span></div>
+                <p class="script-kicker" id="leftKicker">Once upon a time...</p>
+                <h2 id="pageTitle">The day<br>our paths crossed</h2>
+                <div class="small-divider"><span>✦</span></div>
+                <p class="story-text" id="leftText"></p>
+                <div class="page-bottom"><span>OUR LITTLE STORY</span><span id="leftPageNo">01</span></div>
+              </div>
+            </article>
+            <article class="paper-page right-page">
+              <div class="page-content right-content">
+                <div class="photo-frame" id="photoFrame">
+                  <div class="photo-art">
+                    <img id="memoryImage" src="images/memory-01.jpg" alt="A screenshot from our first conversations">
+                    <span class="art-fallback" id="artFallback">✧　A little memory　✧</span>
+                  </div>
+                  <span class="photo-caption" id="photoCaption">A little beginning</span>
+                </div>
+                <p class="right-story" id="rightText"></p>
+                <div class="handwritten" id="handwritten">with warmth, always ♡</div>
+                <div class="page-bottom"><span>♡</span><span id="rightPageNo">02</span></div>
+              </div>
+            </article>
+          </div>
+          <div class="page-turn" id="pageTurn" aria-hidden="true">
+            <div class="turn-front"><span class="turn-flower">✿</span><span class="turn-number" id="turnNumber">02</span></div>
+            <div class="turn-back"></div>
+          </div>
+          <div class="book-cover" id="bookCover">
+            <div class="cover-border">
+              <div class="cover-emblem">✿</div>
+              <p class="cover-overline">A STORY WRITTEN WITH SINCERITY</p>
+              <h2>Our Little<br><em>Story</em></h2>
+              <div class="cover-line"></div>
+              <p class="cover-date">Since November 1st</p>
+              <p class="cover-dedication">A little book, especially for you</p>
+              <button id="coverOpen" class="cover-button">Turn the first page →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reader-controls">
+        <button class="page-button" id="previousButton" disabled>← Previous</button>
+        <div class="progress-wrap"><span id="progressText">THE COVER</span><div class="progress-track"><span id="progressBar"></span></div></div>
+        <button class="page-button page-button-next" id="nextButton">Next page →</button>
+      </div>
+      <p class="reader-hint">You can use the arrow keys to turn the pages</p>
+    </section>
+  </main>
+
+  <section class="birthday-modal" id="birthdayModal" aria-hidden="true">
+    <div class="birthday-card">
+      <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+      <div class="birthday-flowers">✿　✧　✿</div>
+      <p class="overline">A wish for your new chapter</p>
+      <h2>Happy Birthday,<br><em>Ammy</em></h2>
+      <p class="birthday-message">May the year ahead bring you gentle days, genuine smiles, new adventures, kind people, and little moments that make you glad to be here.</p>
+      <p class="birthday-message second">I'm genuinely glad our paths crossed. Thank you for becoming such a lovely part of my days. I hope we can keep making good memories, one day at a time.</p>
+      <div class="birthday-signature">With sincerity, ♡</div>
+      <button class="letter-link" id="birthdayLetterOpen">Read my birthday letter →</button>
+      <br>
+      <button class="letter-link" id="letterOpen">A little message for difficult days →</button>
+      <div class="to-be-continued">To be continued...</div>
+    </div>
+  </section>
+
+  <section class="letter-modal" id="birthdayLetterModal" aria-hidden="true">
+    <article class="letter-card">
+      <button class="modal-close" id="birthdayLetterClose" aria-label="Close">×</button>
+      <p class="overline">A letter from my heart</p>
+      <h2>Happy Birthday,<br><em>my cutest Ammy</em> ♡</h2>
+      <div class="letter-copy">
+        <p>Happy Birthday, my cutest Ammy ❤️</p>
+        <p>You know, when we first met on November 1st, in that random voice room, I never imagined that a simple conversation would eventually become something so special to me.</p>
+        <p>At first, I just thought your voice was really cute. Every time I heard it, it made me happy, even though you always shyly denied that your voice was cute. But as time passed, I realized that it wasn't just your voice that I liked. It was your kindness, your personality, your little habits, and the way you shared pieces of your everyday life with me.</p>
+        <p>Somehow, without even realizing it, I started looking forward to talking to you every day. I wanted to hear your voice, know how your day went, and share little things about my own life with you. You gradually became someone I genuinely look forward to talking to.</p>
+        <p>I'm really happy that we decided to exchange social media and slowly get to know each other. I know you don't easily trust boys, and sometimes you say you don't believe in love. That's why it means so much to me that you've allowed me to get closer to you. You once told me that you've never talked to another boy the way you talk to me. Honestly, that made me incredibly happy.</p>
+        <p>I know you sometimes call me a liar, haha. But there's something I really want you to know: I don't want to be someone who simply makes beautiful promises to you. I want to be someone whose actions gradually make you feel that you can trust him. I don't want to disappoint the trust you've given me, and I will always try my best to treat your feelings with sincerity and respect.</p>
+        <p>I also understand that you want us to take things slowly, and I think that's a beautiful idea. We don't have to rush anything or put pressure on each other. I want us to have enough time to understand each other, discover more about each other's personalities, share happiness, and even get through difficult days together. I believe that something built with patience, understanding, and trust has a better chance of lasting.</p>
+        <p>On your birthday, I don't just wish you happiness for today. I hope the coming year brings you countless beautiful moments, new experiences, genuine smiles, and everything your heart has been wishing for.</p>
+        <p>Please always remember that you deserve kindness, respect, and genuine love. Never feel that you have to change yourself to be worthy of these things.</p>
+        <p>And finally, I'm really glad that November 1st happened. Out of all the random conversations in this world, somehow, ours became something I truly treasure.</p>
+        <p>Thank you for coming into my life. I'm looking forward to all the little conversations, silly moments, beautiful memories, and stories we haven't shared yet.</p>
+        <p>Happy Birthday once again. Take your time, be yourself, and never feel pressured to become anything other than who you are.</p>
+        <p class="letter-final">I'm genuinely happy to have met you. ♡</p>
+      </div>
+      <div class="birthday-signature">With all my sincerity, ♡</div>
+    </article>
+  </section>
+
+  <section class="letter-modal" id="letterModal" aria-hidden="true">
+    <article class="letter-card">
+      <button class="modal-close" id="letterClose" aria-label="Close">×</button>
+      <p class="overline">For the days that feel a little heavy</p>
+      <h2>A little message<br><em>just for you</em></h2>
+      <div class="letter-copy">
+        <p>My dear Ammy,</p>
+        <p>I hope you won't let the hardest thoughts convince you that your story has nothing good left in it. I know life can feel heavy sometimes, and I won't pretend that a few kind words can make every difficult feeling disappear. I may not always know exactly what you're going through, but I want to listen without judging you.</p>
+        <p>Please give yourself the chance to enjoy this world in your own time: the little things, new places, favourite songs, silly conversations, warm meals, unexpected laughter, and all the experiences you haven't had yet. You deserve more than just getting through difficult days. You deserve moments that feel genuinely good.</p>
+        <p>When things feel overwhelming, you don't have to pretend to be okay with me. You can tell me how you really feel. And I hope you'll also reach out to someone you trust nearby or a professional who can support you in person. You don't have to carry everything alone, and you deserve support beyond a screen, too.</p>
+        <p>I can't promise that every day will be easy, but I sincerely hope I can share many happier days and beautiful memories with you. There are still so many pages of life waiting to be written, and I hope you get to discover them at your own pace.</p>
+        <p class="letter-final">Your story matters, Ammy. I'm glad you're here. ♡</p>
+      </div>
+      <div class="birthday-signature">Always wishing you gentler days, ♡</div>
+    </article>
+  </section>
+
+  <audio id="backgroundMusic" src="music/backgroundMusic.mp3" loop preload="auto"></audio>
+  <script src="js/story.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
